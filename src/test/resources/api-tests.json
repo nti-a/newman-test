@@ -1,0 +1,76 @@
+{
+  "info": {
+    "_postman_id": "178a6276-2698-4420-9d3a-c9fb4d9abaec",
+    "name": "JSONPlaceholder",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48345579",
+    "_collection_link": "https://go.postman.co/collection/48345579-178a6276-2698-4420-9d3a-c9fb4d9abaec?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "get",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response time is less than 2000ms', function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(2000);",
+              "});",
+              "",
+              "pm.test('Content-Type header is present and contains text/html', function () {",
+              "    pm.response.to.have.header('Content-Type');",
+              "    pm.expect(pm.response.headers.get('Content-Type')).to.include('text/html');",
+              "});",
+              "",
+              "pm.test('Response body is not empty', function () {",
+              "    pm.expect(pm.response.text()).to.not.be.empty;",
+              "});",
+              "",
+              "pm.test('Response contains valid HTML structure', function () {",
+              "    const responseBody = pm.response.text();",
+              "    pm.expect(responseBody).to.include('<!DOCTYPE html>');",
+              "    pm.expect(responseBody).to.include('<html');",
+              "    pm.expect(responseBody).to.include('</html>');",
+              "});",
+              "",
+              "pm.test('Response contains expected page title', function () {",
+              "    const responseBody = pm.response.text();",
+              "    pm.expect(responseBody).to.include('<title>');",
+              "    pm.expect(responseBody).to.include('JSONPlaceholder');",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://jsonplaceholder.typicode.com",
+          "protocol": "https",
+          "host": [
+            "jsonplaceholder",
+            "typicode",
+            "com"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURLjsonplaceholder.typicode.com",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

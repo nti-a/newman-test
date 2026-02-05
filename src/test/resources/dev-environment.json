@@ -1,0 +1,16 @@
+{
+	"id": "099a2629-d2d8-46db-a55d-10b9ebc55d03",
+	"name": "dev-environment",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "https://jsonplaceholder.typicode.com",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"color": null,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-02-05T03:56:22.790Z",
+	"_postman_exported_using": "Postman/11.83.0"
+}
