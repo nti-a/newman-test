@@ -1,6 +1,5 @@
 name: CI with Caching and Artifacts
 on: [push] 
-branches: [ main ] pull_request
 branches: [ main ]
 jobs:
   build:
